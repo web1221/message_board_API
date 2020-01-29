@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-
+  before_action :set_item, only: [:show, :update, :destroy]
   def index
     name = params[:name]
     @groups = Group.search(name)
